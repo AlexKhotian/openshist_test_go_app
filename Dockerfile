@@ -3,4 +3,6 @@ FROM golang:alpine
 ADD . /go/src/app
 WORKDIR /go/src/app
 
-CMD ["go", "run", "main.go"]
+RUN go build
+
+CMD ["/openshist_test_go_app"]
