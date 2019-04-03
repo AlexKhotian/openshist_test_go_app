@@ -3,6 +3,7 @@ FROM golang:alpine
 ADD . /go/src/app
 WORKDIR /go/src/app
 
-RUN go build
+RUN go build -o oc_app main.go
+EXPOSE 8888
 
-CMD ["./openshist_test_go_app"]
+ENTRYPOINT ./oc_app
