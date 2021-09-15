@@ -6,9 +6,9 @@ components:
     container:
       image: golang
       mountSources: true
-      command: ['sleep', '600']
+      command: ['sleep', '60000']
   - name: maven-foo
     container:
       image: maven
       mountSources: true
-      command: ['sleep', '600']
+      command: ['sleep', '60000']
