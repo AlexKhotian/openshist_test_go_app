@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: go-sample-app
+  name: go-sample-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-sample-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: go-sample-app
+    spec:
+      containers:
+      - image: go-simple-app
+        name: go-simple-app
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8888
+        resources: {}
+status: {}
